@@ -1,0 +1,119 @@
+body {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: 'Handlee', cursive;
+  background-image: url(pinkcheckered.png);
+  color: #4e3b33;
+}
+
+div {
+  margin: 0 5px;
+}
+
+.nav {
+  width: 150px;
+  position: relative;
+  float: left;
+  height: 100%;
+  background-color: rgba(255, 172, 165, .8);
+  border-radius: 0 0 10px 10px;
+}
+
+.a, .b {
+  width: 480px;
+  position: relative;
+  float: left;
+  padding: 10px;
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: #ffaca5 solid 5px;
+  border-radius: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 200px;
+  padding: 0 auto;
+}
+
+li {
+  padding: 10px 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color: #ee7a94;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #2bb196;
+}
+
+p{
+  padding: 5px 20px;
+  text-indent: 25px;
+}
+
+/* media queries below! */
+
+@media (min-width: 400px) and (max-width: 799px) {
+/* one column layout */
+  body {
+    width: 400px;
+  }
+
+  div{
+    margin-bottom: 5px;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .a, .b {
+    width: 370px;
+    margin-top: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    padding: 10px;
+  }
+
+  p {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+/* two column layout */
+  body {
+    width: 800px;
+  }
+
+  .a, .b {
+    position: static;
+    float: none;
+    margin-bottom: 5px;
+    margin-left: 160px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+/* three column layout; since I worked backwards, this is the default layout? */
+}
