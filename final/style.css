@@ -1,0 +1,214 @@
+  /* edit width to be equal to the total width of all boxes */
+html{
+  height: 100%;
+}
+
+body {
+  position: fixed;
+  right: 400px;
+  top: 0;
+  max-width: 1000px;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #e2e3e3;
+  background-image: url('imgs/bg.png');
+  background-position: bottom left;
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  height: 100%;
+  background-color: white;
+}
+
+/* navigation bar code*/
+nav {
+  /* total width: 200px */
+  background-image: url('imgs/navbg.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: white;
+  position: relative;
+  width: 200px;
+  float: left;
+  text-align: right;
+  color: black;
+  font-weight: 400;
+}
+
+/* links */
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  color: darkred;
+  padding-right: 15px;
+}
+
+a:visited {
+  color: darkred;
+  text-decoration: line-through;
+}
+
+.navul {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 20px;
+  padding-top: 200px;
+}
+
+.sublink {
+  font-size: 12px;
+}
+
+hr {
+  width: 75%;
+  color: red;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* main body code */
+header {
+  font-weight: 400;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.main {
+  /* total width: 800px */
+  background-color: black;
+  position: relative;
+  float: right;
+  max-width: 800px;
+  min-width: 400px;
+  min-height: 100%;
+}
+
+article {
+  padding: 10px 20px;
+}
+
+/* character choice buttons */
+.characters {
+  width: 395px;
+  margin: 0 auto;
+}
+
+button {
+  width: 75px;
+}
+
+/* character choices; default shown is shin, all others hidden */
+.toma, .ikkyu, .kent, .ukyo {
+  display: none;
+}
+
+.date {
+  list-style: decimal;
+  color: white;
+}
+
+li {
+  color: gray;
+  list-style: none;
+}
+
+.trust {
+  color: white;
+}
+
+.suspicion {
+    color: darkred;
+}
+
+.affection {
+    color: hotpink;
+}
+
+.filler {
+  /* total width:  400px */
+  background: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  min-height: 100%;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 200;
+}
+
+section {
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+  background: -o-radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+  background: -moz-radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+  background: radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+  padding: 25px 15px;
+}
+
+p {
+    text-indent: 25px;
+}
+
+b {
+  color: red;
+}
+
+/* media query max-width 800px?, move navigation to the top */
+@media (max-width: 1400px) {
+/* to make is scrollable */
+  html, body {
+    position: static;
+  }
+
+/* changing the navigation to a top bar */
+  nav {
+    background-image: url('imgs/navbghori.png');
+    background-repeat: no-repeat;
+    float: right;
+    min-height: 150px;
+    width: 100%;
+    margin-right: 0;
+    position: absolute;
+    right: 400px;
+  }
+
+  .navul {
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+
+/* because the container was changed */
+  .main {
+    position: absolute;
+    right: 400px;
+    top: 150px;
+  }
+}
+
+/* media query max-width 400px, single column layout */
+@media (max-width: 800px) {
+  body {
+    max-width: 100%;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .filler {
+    display: none;
+  }
+
+  .main {
+    position: static;
+  }
+}
